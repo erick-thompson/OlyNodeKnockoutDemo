@@ -42,3 +42,26 @@
     <script data-main="js/main" src="js/ext/require.js"></script>
 </body>
 </html>
+
+<script lang="javascript">
+// being lazy. these should go into another file
+
+window.util = {
+    any: function (list, predicate) {
+        for (var item in list) {
+            if (predicate(item) === true)
+                return true;
+        }
+        return false;
+    },
+
+    count: function (list, predicate) {
+        var count = 0;
+        for (var item in list) {
+            if (predicate(item) === true)
+                count++;
+        }
+        return count;
+    }
+}
+</script>
