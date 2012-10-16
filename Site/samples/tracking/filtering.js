@@ -9,7 +9,7 @@ function MyViewModel() {
                 this.lastInputWasValid(false);    
             else {
                 this.lastInputWasValid(true);
-                this.acceptedNumericValue(value); // Write to underlying storage
+                this.acceptedNumericValue(value);
             }
         },
         owner: this

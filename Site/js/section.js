@@ -2,6 +2,7 @@ define(["knockout"], function(ko) {
     return function(name, template, style) {
         var self = this;
         this.name = name;
+        this.prettyName = ko.observable(name);
         this.template = template || name;
         this.data = ko.observable();
         this.style = style;

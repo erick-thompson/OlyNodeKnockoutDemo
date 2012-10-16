@@ -34,6 +34,7 @@ h2.center
     position: absolute;
     bottom: 10px;
     z-index: -1;
+    clear: both;
 }
 
 #map a
@@ -213,14 +214,8 @@ div.center
 
 .website
 {
-    font-size: 26px;
-}
-
-.website i
-{
-    color: #4099FF;
     margin-left: 20px;
-    font-size: 28px;
+    font-size: 34px;
 }
 
 .speaker {
@@ -230,7 +225,7 @@ div.center
 
 .title
 {
-    margin-top: 80px;
+    margin-top: 200px;
     font-size: 120px;
     
     

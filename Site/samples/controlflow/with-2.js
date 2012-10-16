@@ -1,7 +1,7 @@
 function AppViewModel() {
     var self = this;
-    self.twitterName = ko.observable('@joefeser'); //StephenFry
-    self.resultData = ko.observable(); // No initial value
+    self.twitterName = ko.observable('@joefeser'); 
+    self.resultData = ko.observable(); 
  
     self.getTweets = function() {
         twitterApi.getTweetsForUser(self.twitterName(), function(data) {

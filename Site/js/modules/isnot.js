@@ -2,6 +2,7 @@ define(["knockout"], function(ko) {
     return function() {
         this.title = "What Knockout is not";
         this.allPoints = [
+            { title: "Complete system" },
             { title: "UI library with widgets" },
             { title: "Collection of utilities" },
             { title: "Transparent library" },

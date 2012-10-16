@@ -9,9 +9,9 @@ define(["knockout", "sample"], function(ko, Sample) {
     };
 
     return new Sample("Arrays", "arrays", [
-        new Sample.State("Basic array", "basic-array", new { forceLoad: true }),
-        new Sample.State("Using an observableArray", "observable-array", new { forceLoad: true }),
-        new Sample.State("Adding items to an observableArray", "adding-item", new { forceLoad: true }),
-        new Sample.State("Removing items", "removing-item", new { forceLoad: true }),
-    ]);
+        new Sample.State("Basic array", "basic-array"),
+        new Sample.State("Using an observableArray", "observable-array"),
+        new Sample.State("Adding items to an observableArray", "adding-item"),
+        new Sample.State("Removing items", "removing-item"),
+    ], true);
 });

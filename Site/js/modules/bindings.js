@@ -16,7 +16,7 @@ define(["knockout", "sample"], function(ko) {
                 { title: "event", sample: "\n<div data-bind=\"event: { dblclick: showDetails }\"></div>\n" },
                 { title: "submit", sample: "\n<form data-bind=\"submit: saveData\"></form>\n" },
                 { title: "enable", sample: "\n<input data-bind=\"enable: editable\"/>\n" },
-                { title: "disable", sample: "\n<input data-bind=\"disable: readyOnly\" />\n" },
+                { title: "disable", sample: "\n<input data-bind=\"disable: readOnly\" />\n" },
                 { title: "value", sample: "\n<input data-bind=\"value: firstName\" />\n" },
                 { title: "hasfocus", sample: "\n<input data-bind=\"hasfocus: focused\" />\n" },
                 { title: "checked", sample: "\n<input type=\"checkbox\" data-bind=\"checked: allowUpdates\" />\n" },

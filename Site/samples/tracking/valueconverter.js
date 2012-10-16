@@ -7,7 +7,7 @@ function MyViewModel() {
         },
         write: function (value) {
             value = parseFloat(value.replace(/[^\.\d]/g, ""));
-            this.price(isNaN(value) ? 0 : value); // Write to underlying storage
+            this.price(isNaN(value) ? 0 : value);
         },
         owner: this
     });

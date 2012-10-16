@@ -5,6 +5,37 @@
 </p>
 
 <p class="expo">
-    For the view, there are a wide variety of bindings that you can use out of the box.
-
+    For the view, there are a wide variety of bindings that you can use out of the box. 
 </p>
+
+<pre>
+# coffeescript VM
+class window.CheckInLinksVM
+    constructor: (report, objectType, sectionVisible, @checkinCommand, @aggregateRootLocator) ->
+        @canCheckIn = report.CanCheckIn
+        @canCheckOut = report.CanCheckOut
+        @checkOutLink = report.CheckOutLink
+        
+        @visible = sectionVisible # is the section visible in the view (i.e. hide the links for previous versions)
+        @objectType = objectType # what type of objects are we checking in/out (i.e. 'Assumption Set')
+
+    checkin: =>
+        return unless @canCheckIn
+        dialog = new CommitWithVersionMessageDialogController()
+        dialog.showDialog((messages, successCallback) => 
+            Ajax.execute(@checkinCommand,
+                $.extend({}, messages, @aggregateRootLocator),
+                { 
+                    success: ((r, c) => 
+                        successCallback()
+                        setLocation window.location), 
+                    operationInProgressMessage: "Checking in #{@objectType}...", 
+                    errorMessage: "Failed to checkin #{@objectType}."
+                }))
+
+
+# view
+&lt;a data-bind="click:checkin, css: { enabled:canCheckIn }" href="javascript:void(0)"&gt;Check In&lt;/a&gt;
+&lt;a data-bind="enabled:canCheckOut, attr: { href:checkOutLink }"&gt;Check Out&lt;/a&gt;
+
+</pre>
