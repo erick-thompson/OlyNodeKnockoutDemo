@@ -3,3 +3,9 @@
 <h3 class="center" data-bind="text: speaker"></h3>
 <h3 class="center" data-bind="text: email"></h3>
 <h3 class="center" data-bind="text: twitter"></h3>
+
+<div>
+<ul class="resources" data-bind="foreach: links">
+    <li><span data-bind="text: $data"></span></li>
+</ul>
+</div>

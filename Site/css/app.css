@@ -230,3 +230,11 @@ div.center
     
     
 }
+
+.resources li
+{
+    list-style: none;
+    list-style-type: none;
+    line-height: 40px;
+    font-size: 30px;
+}

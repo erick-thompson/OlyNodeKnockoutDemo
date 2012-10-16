@@ -4,7 +4,7 @@ define(["knockout"], function (ko) {
         this.allPoints = [
             { title: "JavaScript library for rich data binding" },
             { title: "Focused on the client" },
-            { title: "Fits best with applications that use the MVVM pattern" },
+            { title: "Works extremely well with the MVVM pattern" },
             { title: "Especially useful for RIA/single page applications" },
             { title: "A library that plays well with others" },
             { title: "Active development with an active user community" },
