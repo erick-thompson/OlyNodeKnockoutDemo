@@ -5,12 +5,20 @@
 
         this.sections = ko.observableArray([
             new Section("intro"),
-            new Section("me"),
             new Section("itis"),
             new Section("isnot"),
             new Section("MVVM"),
-            new Section("points"),
             new Section("one", "sample"),
+            new Section("bindings"),
+            new Section("extensibility"),
+            new Section("goodenough"),
+            new Section("arrays", "sample"),
+            new Section("declare", "sample"),
+            new Section("tracking", "sample"),
+            new Section("templating", "sample"),
+            new Section("controlflow", "sample"),
+            new Section("formfields", "sample"),
+
             new Section("two", "sample"),
             new Section("bye")
         ]);

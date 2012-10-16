@@ -1,0 +1,8 @@
+<ul data-bind="foreach: planets">
+    <li>
+        Planet: <b data-bind="text: name"> </b>
+        <div data-bind="if: capital">
+            Capital: <b data-bind="text: capital.cityName"> </b>
+        </div>
+    </li>
+</ul>

@@ -183,3 +183,55 @@ div.center
     font-size: .8em;
     color: #666;
 }
+
+.binding
+{
+    text-align: center;
+    width: 350px;
+    font-size: 48px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 50px 0px 50px 0px;
+    box-shadow: 1px 1px 1px #333;
+    background-color: #993333;
+}
+
+.binding span
+{
+    color: #fff;
+}
+
+.expo
+{
+    font-size: xx-large;
+    text-align: left;
+    vertical-align: top; 
+    line-height: normal;   
+    margin-top: 20px;
+}
+
+.website
+{
+    font-size: 26px;
+}
+
+.website i
+{
+    color: #4099FF;
+    margin-left: 20px;
+    font-size: 28px;
+}
+
+.speaker {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title
+{
+    margin-top: 80px;
+    font-size: 120px;
+    
+    
+}

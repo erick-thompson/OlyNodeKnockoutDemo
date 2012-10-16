@@ -1,6 +1,10 @@
 <h3>Completed Games</h3>
 <ul data-bind="foreach: finishedGames">
-    <li data-bind="text: name"></li>
+    <li>
+        <span data-bind="text: name"></span>
+        <span data-bind="visible: winner">Winner!</span>
+        <a href="javascript:void(0)" data-bind="click: toggleWin">Toggle Win</a>
+    </li>
 </ul>
 
 <span data-bind="text: advice"/></span>

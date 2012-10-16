@@ -1,0 +1,14 @@
+<form data-bind="submit: getTweets">
+    Twitter account:
+    <input data-bind="value: twitterName" />
+    <button type="submit">Get tweets</button>
+</form>
+ 
+<div data-bind="with: resultData">
+    <h3>Recent tweets fetched at <span data-bind="text: retrievalDate"> </span></h3>
+    <ol data-bind="foreach: topTweets">
+        <li data-bind="text: text"></li>
+    </ol>
+ 
+    <button data-bind="click: $parent.clearResults">Clear tweets</button>
+</div>

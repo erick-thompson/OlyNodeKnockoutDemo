@@ -1,0 +1,13 @@
+Choose a ticket class:
+<select data-bind="options: tickets, 
+                   optionsCaption: 'Choose...',
+                   optionsText: 'name',
+                   value: chosenTicket"></select>
+                   
+<button data-bind="enable: chosenTicket, 
+                   click: resetTicket">Clear</button>
+</p>                   
+<p data-bind="with: chosenTicket">
+    You have chosen <b data-bind="text: name"></b>
+    ($<span data-bind="text: price"></span>)    
+</p>

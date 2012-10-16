@@ -1,0 +1,15 @@
+<p>
+    Your country: 
+    <!-- Same as example 3, except the <select> box expressed as follows: -->
+	<select data-bind="options: availableCountries, 
+                   optionsText: function(item) { 
+                       return item.countryName + ' (pop: ' + item.countryPopulation + ')' 
+                   }, 
+                   value: selectedCountry, 
+                   optionsCaption: 'Choose...'"></select>
+</p>
+ 
+<div data-bind="visible: selectedCountry"> <!-- Appears when you select something -->
+    You have chosen a country with population 
+    <span data-bind="text: selectedCountry() ? selectedCountry().countryPopulation : 'unknown'"></span>.
+</div>

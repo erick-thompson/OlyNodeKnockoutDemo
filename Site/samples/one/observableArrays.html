@@ -1,6 +1,7 @@
 <h3>Completed Games</h3>
 <ul data-bind="foreach: finishedGames">
-    <li data-bind="text: name">
-        (winner - <span data-bind="text: winner">)</span>
+    <li>
+        <span data-bind="text: name"></span>
+        <span data-bind="visible: winner">Winner!</span>
     </li>
 </ul>

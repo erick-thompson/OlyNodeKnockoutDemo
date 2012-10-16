@@ -1,15 +1,19 @@
 var ViewModel = function () {
     finishedGames = ko.observableArray([
-        { name: 'Tue', winner: 'not you' },
-        { name: 'Wed', winner: 'not you' },
-        { name: 'Thurs', winner: 'not you' },
-        { name: 'Fri', winner: 'you' }
+        new Game('Tue', false),
+        new Game('Wed', false),
+        new Game('Thurs', false),
+        new Game('Fri', true),
     ]);
 };
 
-var Line = function(name, winner) {
-    name = name,
-    winner = winner
+var Game = function (name, winner) {
+    this.name = ko.observable(name);
+    this.winner = ko.observable(winner);
+
+    this.toggleWin = function () {
+        winner(!winner());
+    };
 };
 
 ko.applyBindings(new ViewModel());
